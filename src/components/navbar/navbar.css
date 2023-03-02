@@ -1,0 +1,15 @@
+.rightToggleMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+@media (min-width: 58.125rem) {
+    .rightToggleMenu span {
+        display: none;
+    }
+
+
+}

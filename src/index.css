@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.email_me {
+  font-size: 1rem;
+}
+.email_me_mobile {
+   font-size: 1.5rem;
+  font-weight: 500;
+  color:white;
+}
+.quote {
+  font-size: 1rem;
+  color: rgb(179, 173, 173);
+  font-style: italic;
+}
+
+#link,
+#link:hover,
+#link:active {
+  color: blue;
+}
+.transform_up {
+  transform: translateY(-15px);
+}
+.icons i {
+  font-size: 2.5rem;
+}
+
+.icons > div {
+  display: flex;
+  flex-direction: column;
+}
+.skills_pic {
+  width: 2.5rem;
+}
+.mongo_pic {
+  width: 3.5rem;
+}
+.color_pink {
+  color: rgb(247, 108, 131);
+}
+.color_git {
+  color: rgb(243, 52, 84);
+}
+.color_npm {
+  color: rgb(247, 8, 48);
+}
+.text_mongo {
+  display: inline-block;
+  margin-top: -1rem;
+  transform: translateX(-3rem);
+}
+
+.button_resume {
+  background-color: #e64e04;
+  transition: all 0.3s ease-out;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: 2;
+  border-radius: 7rem;
+  padding: 0.5rem 2rem;
+}
+.button_resume::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e64e04;
+  z-index: -1;
+  transition: all 0.7s;
+  border-radius: 7rem;
+}
+.button_resume:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.project_card {
+  overflow: visible;
+}
+@media (max-width: 48em) {
+  .icons > div {
+    margin: 1rem;
+  }
+}
+.project_title {
+  font-weight: bold;
+
+  font-style: italic;
+}
+#message_button,
+#login_button {
+  width: 100%;
+  background-color: #e64f04;
+  color: white;
+  font-size: 1.2rem;
+}
+#delete_button {
+  background-color: #e64f04;
+}
+#message_button:focus #login_button {
+  outline: none;
+}
+.required::after {
+  content: "*";
+  transform: scale(1.5);
+  display: inline-block;
+  color: #e64f04;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.link_white {
+  color: rgba(216, 212, 212, 0.655);
+}
