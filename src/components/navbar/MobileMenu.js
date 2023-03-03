@@ -23,7 +23,7 @@ export const MobileMenu = ({ isOpen, toggle }) => {
         <MobileMenuLink to="home" onClick={toggle}>
           Home
         </MobileMenuLink>
-        <MobileMenuLink to="skills" onClick={toggle}>
+        <MobileMenuLink to="technologies" onClick={toggle}>
           Skills
         </MobileMenuLink>
         <MobileMenuLink to="projects" onClick={toggle}>
@@ -80,7 +80,7 @@ export const MobileMenu = ({ isOpen, toggle }) => {
           <i className="fab fa-linkedin"></i> LI
         </MobileSocial>
       </MobileSocials>
-      <MobileQuote className="quote">"No commitment means no achievement!!"</MobileQuote>
+      <MobileQuote className="quote">"Never giveup on yourself !!"</MobileQuote>
     </MobileMenuContainer>
   );
 };
