@@ -30,8 +30,8 @@ function App() {
           <Footer />
         </>
       </ThemeProvider>
-      <Login />
-      <Messages></Messages>
+      {/* <Login /> */}
+      {/* <Messages></Messages> */}
       <ToastContainer />
     </BrowserRouter>
   );
