@@ -133,3 +133,7 @@ code {
   opacity:0;
   cursor:default;
 }
+.center{
+  position:absolute;
+  transform:translate(-50%, -50%)
+}

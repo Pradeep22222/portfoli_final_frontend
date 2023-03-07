@@ -23,7 +23,7 @@ export const Login = () => {
   return (
     <div>
       {/* left to apply class center in the row below */}
-      <Form onSubmit={handleOnSubmit}>
+      <Form className="center" onSubmit={handleOnSubmit}>
         <Row className="text-center ">
           <Col md={1} sm={0}></Col>
           <Col sm={6} md={5}>
