@@ -1,24 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-
+import { useLongPress } from "use-long-press";
 
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { postAPILogins } from '../../helpers/axiosHelper.js';
+import { postAPILogins } from "../../helpers/axiosHelper.js";
+import { Link, useNavigate } from "react-router-dom";
 export const Login = () => {
   const [form, setForm] = useState({});
+  const navigate= useNavigate()
+   const bind = useLongPress(() => {
+     console.log("fhdsf");
+     navigate("/messageboard");
+   });
   const handleOnChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
-    setForm({...form,[name]:value})
-  }
-  const handleOnSubmit = async(e) => {
+    setForm({ ...form, [name]: value });
+  };
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
-    const result = await postAPILogins(form)
-    console.log(result)
-
-  }
+    const result = await postAPILogins(form);
+    console.log(result);
+  };
 
   return (
     <div>
@@ -55,7 +60,7 @@ export const Login = () => {
           <Col md={1} sm={0}></Col>
 
           <Col sm={12} md={10}>
-            <Button id="login_button" variant="none" type="submit">
+            <Button {...bind()} id="login_button" variant="none" type="submit">
               Login
             </Button>
           </Col>
@@ -64,4 +69,4 @@ export const Login = () => {
       </Form>
     </div>
   );
-}
+};
