@@ -1,6 +1,6 @@
 import React from "react";
-import {  Link } from "react-router-dom";
-
+import {  Link, useNavigate } from "react-router-dom";
+import { useLongPress } from 'use-long-press';
 import { animateScroll as scroll } from "react-scroll";
 import {
   ArrowToTop,
@@ -26,6 +26,12 @@ const toTop = () => {
 
 const Footer = ({ children }) => {
   const year = new Date().getFullYear();
+  const navigate = useNavigate();
+  const bind = useLongPress(() => {
+     console.log("fhdsf")
+      navigate("/login");
+     
+   });
   return (
     <StyledFooter>
       <FooterSmallTitleWrapper>
@@ -102,9 +108,9 @@ const Footer = ({ children }) => {
         <Copyright>
           <small>
             &copy; Copyright {year},{" "}
-            <Link to="/login" className="link_white">
-              Pradeep Kumar Dhital
-            </Link>
+            <span  {...bind()}>
+              Pradeep Dhital
+            </span>
           </small>
         </Copyright>
       </div>

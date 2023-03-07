@@ -15,25 +15,20 @@ import GlobalStyles from "./style/global/GlobalStyle";
 import { theme } from "./style/global/Theme";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Main } from "./components/main/Main";
 function App() {
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyles />
-          <Navbar />
-          <Home />
-          <Technologies />
-          <Projects />
-          <About />
-          <ParallaxComponent />
-          <Footer />
-        </>
-      </ThemeProvider>
-      {/* <Login /> */}
-      {/* <Messages></Messages> */}
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main></Main>}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/messageboard" element={<Messages></Messages>}></Route>
+        </Routes>
+      </BrowserRouter>
       <ToastContainer />
-    </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
