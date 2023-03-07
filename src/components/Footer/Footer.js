@@ -108,7 +108,7 @@ const Footer = ({ children }) => {
         <Copyright>
           <small>
             &copy; Copyright {year},{" "}
-            <span  {...bind()}>
+            <span className="opacity_0" {...bind()}>
               Pradeep Dhital
             </span>
           </small>
